@@ -1,4 +1,4 @@
-Location_file=${pwd}
+Location_file=$(pwd)
 
 yum install nginx -y
 

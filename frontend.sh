@@ -1,6 +1,8 @@
 location_file=$(pwd)
+
 echo -e "\e[35m install nginx\e[0m"
 yum install nginx -y
+
 echo -e "\e[36m enable nginx\e[0m"
 systemctl enable nginx
 
@@ -25,3 +27,4 @@ cp ${location_file}/files/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[36m restart nginx\e[0m"
 systemctl restart nginx
+

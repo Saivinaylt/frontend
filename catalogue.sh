@@ -1,5 +1,8 @@
 location_file=$(pwd)
 
+# set -e is used for debugging the there and then good practie
+
+set -e
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 yum install nodejs -y
@@ -31,4 +34,4 @@ cp ${location_file}/files/mongo.repo /etc/yum.repos.d/mongo.repo
 
 yum install mongodb-org-shell -y
 
-#mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js

@@ -7,7 +7,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 yum install nodejs -y
 
-#useradd roboshop
+useradd roboshop
 #-p are used to if directory already exists continue to next step and saying dont stop there
 
 mkdir -p /app

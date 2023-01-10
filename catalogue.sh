@@ -1,14 +1,10 @@
 location_file=$(pwd)
 
-set -e
-
-
-
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 yum install nodejs -y
 
-#useradd roboshop
+useradd roboshop
 #-p are used to if directory already exists continue to next step and saying dont stop there
 
 mkdir -p /app
@@ -29,5 +25,10 @@ systemctl daemon-reload
 
 systemctl enable catalogue
 systemctl start catalogue
+
+
+cp ${location_file}/files/mongo.repo /etc/yum.repos.d/mongo.repo
+
+yum install mongodb-org-shell -y
 
 #mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js

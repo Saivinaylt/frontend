@@ -8,12 +8,16 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 yum install nodejs -y
 
-#useradd robosho
+#useradd roboshop
+#-p are used to if directory already exists continue to next step and saying dont stop there
 
 mkdir -p /app
 
 curl -L -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
+# removing the content and add when 2nd time running the script
+rm -rf /app/*
 cd /app
+
 unzip /tmp/catalogue.zip
 
 cd /app

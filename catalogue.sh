@@ -10,7 +10,7 @@ yum install nodejs -y
 
 #useradd robosho
 
-mkdir /app
+mkdir -p /app
 
 curl -L -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 cd /app

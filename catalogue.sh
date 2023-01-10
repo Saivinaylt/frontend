@@ -36,4 +36,4 @@ cp ${location_file}/files/mongo.repo /etc/yum.repos.d/mongo.repo
 
 yum install mongodb-org-shell -y
 
-mongo --host localhost </app/schema/catalogue.js
+mongo --host mongodb-dev.devopslt.online </app/schema/catalogue.js

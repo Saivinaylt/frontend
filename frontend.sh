@@ -3,6 +3,7 @@ log=/tmp/robosho.log
 
 echo -e "\e[35m install nginx\e[0m"
 yum install nginx -y &>>${log}
+echo $?
 
 echo -e "\e[36m enable nginx\e[0m"
 systemctl enable nginx &>>${log}

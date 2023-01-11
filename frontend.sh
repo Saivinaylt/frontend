@@ -11,7 +11,13 @@ echo $?
 
 echo -e "\e[36m start nginx\e[0m"
 systemctl start nginx &>>${log}
-echo $?
+
+if [ $? -eq 0 ]
+then
+  echo start nginx sucessfully
+  else
+    echo unsucessfull
+  fi
 
 echo -e "\e[36m removing file\e[0m"
 rm -rf /usr/share/nginx/html/* &>>${log}

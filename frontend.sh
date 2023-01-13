@@ -8,6 +8,7 @@ then
   echo install nginx sucessfully
   else
     echo unsucessfull
+    exit
   fi
 
 echo -e "\e[36m enable nginx\e[0m"

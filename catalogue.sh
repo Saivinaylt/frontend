@@ -158,7 +158,9 @@ then
 exit
 fi
 
-mongo --host mongodb-dev.devopslt.online </app/schema/catalogue.js
+#mongo --host mongodb-dev.devopslt.online </app/schema/catalogue.js
+
+mongo --host localhost </app/schema/catalogue.js
 if [ $? -eq 0 ]
 then
   echo sucess

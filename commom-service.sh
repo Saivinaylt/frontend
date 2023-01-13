@@ -7,6 +7,6 @@ check_function () {
     echo sucess
     else
       echo failure
-  exit
+
   fi
 }
